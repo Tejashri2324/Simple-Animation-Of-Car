@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+/* Sky Styling */
+.Sky {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Sky.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+/* Tree Styling and positioning */
+.Trees {
+    height: 100vh;
+    background-image: url(Trees.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+/* Track Styling and positioning */
+.Track {
+    background-image: url(Track.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0px;
+    width: 1000vw;
+    height: 20vh;
+    animation: trackanimation 6s linear infinite;
+}
+
+/* Car Styling and positioning */
+.car {
+    background-image: url(car.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17rem;
+    height: 4.699rem;
+    position: absolute;
+    bottom: 77px;
+    left: 396px;
+}
+
+/* Wheel's Styling and positioning */
+.wheel {
+    position: absolute;
+    animation: wheelanimation linear .6s infinite;
+}
+.wheel1 image {
+    background-image: url(car wheel right.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 46px;
+    height: 49px;
+    top: 71px;
+    left: 570px;
+    animation:wheelrotation linear.6s infinite
+}
+.wheel2 image {
+    background-image: url(car wheel left.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 43px;
+    height: 44px;
+    top: 77px;
+    left: 433px;
+}
+
+/*Rotation of the wheels*/ 
+@keyframes wheelRotation{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Moving the track backwards */
+@keyframes trackanimation {
+    100% {
+        transform: translate(-500vw);
+    }
+}
+@keyframes shake{
+    0%{
+        transform: translater(-5px);
+    }
+    50%{
+        transform: translater(5px);
+    }
+    100%{
+        transform: translater(-5px);
+    }
+}
